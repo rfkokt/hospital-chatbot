@@ -101,10 +101,10 @@ export function ImagePreviewModal({
           </div>
 
           {/* Prompt Display */}
-          <div className="bg-gray-50 p-3 rounded-lg">
-            {/* <p className="text-sm text-gray-600 font-medium mb-1">Prompt:</p>
-            <p className="text-sm text-gray-800">{prompt}</p> */}
-          </div>
+          {/* <div className="bg-gray-50 p-3 rounded-lg">
+            <p className="text-sm text-gray-600 font-medium mb-1">Prompt:</p>
+            <p className="text-sm text-gray-800">{prompt}</p>
+          </div> */}
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-2 justify-end">

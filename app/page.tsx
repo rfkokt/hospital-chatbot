@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import sessionId from "@/lib/sessionId";
 import axios, { AxiosError } from "axios";
 import {
   BedSingle,
@@ -225,22 +226,12 @@ export default function HospitalChatbot() {
     };
 
     try {
-      // const response = await axios.get<APIResponse>(
-      //   `https://images.unsplash.com/photo-1746469535771-71a672e8719f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
-      //   {
-      //     responseType: "blob",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //   }
-      // );
-
       const response = await axios.post<APIResponse>(
         // `${API_CONFIG.baseURL}${API_CONFIG.chatEndpoint}`,
         `http://10.10.3.118:5678/webhook/NGUikh`,
         {
           message: message,
-          sessionId: `session_${Date.now()}`,
+          sessionId,
         },
         {
           headers: {
